@@ -1,0 +1,1529 @@
+[
+    {
+        "id": "b04fcab76102f205",
+        "type": "tab",
+        "label": "Projector control",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "94f85f5b7544858f",
+        "type": "tab",
+        "label": "Computer control",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dd34169d2b1f7fe0",
+        "type": "tab",
+        "label": "Google home",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8c638b97fb2d5d74",
+        "type": "tab",
+        "label": "Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d0b0602f04eb8cc8",
+        "type": "tab",
+        "label": "PC Commands",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "449d86888f3f58b0",
+        "type": "subflow",
+        "name": "Is Projector ON",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "4f2dd9eec6289ee6"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1300,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "b56594bb92b3bdec",
+                        "port": 0
+                    },
+                    {
+                        "id": "06320def72b65688",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "160cacb43619ff0e",
+        "type": "ui_tab",
+        "name": "Room devices",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7ce6cce4de1e85df",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "4d23058efc61dd9d",
+        "type": "ui_group",
+        "name": "Projector Control",
+        "tab": "160cacb43619ff0e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "43d488a4c3576fc5",
+        "type": "ui_group",
+        "name": "Computer",
+        "tab": "160cacb43619ff0e",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0f16f0dd8e8b9bfc",
+        "type": "google-home-conf",
+        "username": "aloussenim"
+    },
+    {
+        "id": "b1f9859af7b4842f",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "home-control.local",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "21ab3ba03891ea3e",
+        "type": "http request",
+        "z": "449d86888f3f58b0",
+        "name": "Checking Projector Status",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://room-projector/cgi-bin/webconf",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Referer",
+                "valueType": "other",
+                "valueValue": "http://room-projector/cgi-bin/webconf"
+            },
+            {
+                "keyType": "other",
+                "keyValue": "content-type",
+                "valueType": "other",
+                "valueValue": "application/x-www-form-urlencoded"
+            }
+        ],
+        "x": 550,
+        "y": 140,
+        "wires": [
+            [
+                "47b05380cc2d9081"
+            ]
+        ]
+    },
+    {
+        "id": "47b05380cc2d9081",
+        "type": "switch",
+        "z": "449d86888f3f58b0",
+        "name": "Check status in settings page",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "The projector is currently on standby",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 820,
+        "y": 140,
+        "wires": [
+            [
+                "b56594bb92b3bdec"
+            ],
+            [
+                "06320def72b65688"
+            ]
+        ]
+    },
+    {
+        "id": "b56594bb92b3bdec",
+        "type": "change",
+        "z": "449d86888f3f58b0",
+        "name": "Is OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "06320def72b65688",
+        "type": "change",
+        "z": "449d86888f3f58b0",
+        "name": "is ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f2dd9eec6289ee6",
+        "type": "change",
+        "z": "449d86888f3f58b0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"page\": \"05\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [
+                "21ab3ba03891ea3e"
+            ]
+        ]
+    },
+    {
+        "id": "de5429604781e4f6",
+        "type": "inject",
+        "z": "b04fcab76102f205",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 90,
+        "y": 140,
+        "wires": [
+            [
+                "9e5028f6e05bd4b0"
+            ]
+        ]
+    },
+    {
+        "id": "62f6765a4409ef9a",
+        "type": "http request",
+        "z": "b04fcab76102f205",
+        "name": "Projector HTTP Command",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.2.115/cgi-bin/directsend?KEY=3B",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Referer",
+                "valueType": "other",
+                "valueValue": "http://192.168.2.115/cgi-bin/webremote"
+            }
+        ],
+        "x": 760,
+        "y": 140,
+        "wires": [
+            [
+                "9a3da10ea525a4cb",
+                "d27d1e51124050c7"
+            ]
+        ]
+    },
+    {
+        "id": "9a3da10ea525a4cb",
+        "type": "debug",
+        "z": "b04fcab76102f205",
+        "name": "Projector command output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2b4032a7c31f09e4",
+        "type": "inject",
+        "z": "b04fcab76102f205",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "0",
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 90,
+        "y": 440,
+        "wires": [
+            [
+                "f2d55f692d32df79"
+            ]
+        ]
+    },
+    {
+        "id": "9e5028f6e05bd4b0",
+        "type": "subflow:449d86888f3f58b0",
+        "z": "b04fcab76102f205",
+        "name": "",
+        "x": 300,
+        "y": 140,
+        "wires": [
+            [
+                "2834dc6c94a22652"
+            ]
+        ]
+    },
+    {
+        "id": "2834dc6c94a22652",
+        "type": "switch",
+        "z": "b04fcab76102f205",
+        "name": "unless already on",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 140,
+        "wires": [
+            [
+                "62f6765a4409ef9a"
+            ]
+        ]
+    },
+    {
+        "id": "dfe0a8e160da38d5",
+        "type": "comment",
+        "z": "b04fcab76102f205",
+        "name": "Turn on projector",
+        "info": "",
+        "x": 100,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "9f892d439081ad18",
+        "type": "comment",
+        "z": "b04fcab76102f205",
+        "name": "Turn off projector",
+        "info": "",
+        "x": 100,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "317982f01559dd5c",
+        "type": "switch",
+        "z": "b04fcab76102f205",
+        "name": "unless already off",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 440,
+        "wires": [
+            [
+                "0e5800127d5db757"
+            ]
+        ]
+    },
+    {
+        "id": "f2d55f692d32df79",
+        "type": "subflow:449d86888f3f58b0",
+        "z": "b04fcab76102f205",
+        "name": "",
+        "x": 300,
+        "y": 440,
+        "wires": [
+            [
+                "317982f01559dd5c"
+            ]
+        ]
+    },
+    {
+        "id": "66915cdff0c34458",
+        "type": "link in",
+        "z": "b04fcab76102f205",
+        "name": "Turn projector ON",
+        "links": [],
+        "x": 125,
+        "y": 80,
+        "wires": [
+            [
+                "9e5028f6e05bd4b0"
+            ]
+        ]
+    },
+    {
+        "id": "65e42b929915de2d",
+        "type": "link in",
+        "z": "b04fcab76102f205",
+        "name": "Turn projector OFF",
+        "links": [],
+        "x": 125,
+        "y": 380,
+        "wires": [
+            [
+                "f2d55f692d32df79"
+            ]
+        ]
+    },
+    {
+        "id": "0e5800127d5db757",
+        "type": "http request",
+        "z": "b04fcab76102f205",
+        "name": "Projector HTTP Command",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.2.115/cgi-bin/directsend?KEY=3B",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Referer",
+                "valueType": "other",
+                "valueValue": "http://192.168.2.115/cgi-bin/webremote"
+            }
+        ],
+        "x": 760,
+        "y": 440,
+        "wires": [
+            [
+                "055a57d364b5231c"
+            ]
+        ]
+    },
+    {
+        "id": "055a57d364b5231c",
+        "type": "delay",
+        "z": "b04fcab76102f205",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "300",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 540,
+        "wires": [
+            [
+                "a24c9caae0a1de31"
+            ]
+        ]
+    },
+    {
+        "id": "a24c9caae0a1de31",
+        "type": "http request",
+        "z": "b04fcab76102f205",
+        "name": "Projector HTTP Command",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.2.115/cgi-bin/directsend?KEY=3B",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Referer",
+                "valueType": "other",
+                "valueValue": "http://192.168.2.115/cgi-bin/webremote"
+            }
+        ],
+        "x": 760,
+        "y": 540,
+        "wires": [
+            [
+                "0be1ac8f33dfa5f7",
+                "3ecb44365b6a0595"
+            ]
+        ]
+    },
+    {
+        "id": "0be1ac8f33dfa5f7",
+        "type": "debug",
+        "z": "b04fcab76102f205",
+        "name": "Projector command output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "32f7b02f21f92101",
+        "type": "link out",
+        "z": "b04fcab76102f205",
+        "name": "Projector OFF Command output",
+        "mode": "return",
+        "links": [],
+        "x": 1135,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "d27d1e51124050c7",
+        "type": "switch",
+        "z": "b04fcab76102f205",
+        "name": "Check success",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1000,
+        "y": 140,
+        "wires": [
+            [
+                "2df7e187e164e701"
+            ],
+            [
+                "8b40620403a7e44c"
+            ]
+        ]
+    },
+    {
+        "id": "3ecb44365b6a0595",
+        "type": "switch",
+        "z": "b04fcab76102f205",
+        "name": "Check success",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1000,
+        "y": 540,
+        "wires": [
+            [
+                "32f7b02f21f92101"
+            ],
+            [
+                "cc2bcf27faa6741f"
+            ]
+        ]
+    },
+    {
+        "id": "b93f288141e3de6d",
+        "type": "inject",
+        "z": "b04fcab76102f205",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "projectorOn",
+        "payloadType": "global",
+        "x": 130,
+        "y": 760,
+        "wires": [
+            [
+                "3a04869cce202500"
+            ]
+        ]
+    },
+    {
+        "id": "ccb4cbacdd4125f4",
+        "type": "comment",
+        "z": "b04fcab76102f205",
+        "name": "Status update",
+        "info": "Status update",
+        "x": 90,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "3a04869cce202500",
+        "type": "subflow:449d86888f3f58b0",
+        "z": "b04fcab76102f205",
+        "name": "",
+        "x": 380,
+        "y": 760,
+        "wires": [
+            [
+                "da5cf2bc15222315"
+            ]
+        ]
+    },
+    {
+        "id": "da5cf2bc15222315",
+        "type": "switch",
+        "z": "b04fcab76102f205",
+        "name": "Should status update",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "projectorOn",
+                "vt": "global"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 600,
+        "y": 760,
+        "wires": [
+            [
+                "8658d67bbea778d4"
+            ]
+        ]
+    },
+    {
+        "id": "8658d67bbea778d4",
+        "type": "change",
+        "z": "b04fcab76102f205",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "projectorOn",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 760,
+        "wires": [
+            [
+                "35af9e98e4012e8c",
+                "8a520ad09cee8eed"
+            ]
+        ]
+    },
+    {
+        "id": "35af9e98e4012e8c",
+        "type": "debug",
+        "z": "b04fcab76102f205",
+        "name": "Projector status update",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "2df7e187e164e701",
+        "type": "link out",
+        "z": "b04fcab76102f205",
+        "name": "Projector ON Command output",
+        "mode": "return",
+        "links": [],
+        "x": 1175,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "351896106baead34",
+        "type": "inject",
+        "z": "b04fcab76102f205",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 90,
+        "y": 600,
+        "wires": [
+            [
+                "b7f0e0b27238b15a"
+            ]
+        ]
+    },
+    {
+        "id": "b7f0e0b27238b15a",
+        "type": "change",
+        "z": "b04fcab76102f205",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "projectorOn",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b40620403a7e44c",
+        "type": "debug",
+        "z": "b04fcab76102f205",
+        "name": "Command failure",
+        "active": true,
+        "tosidebar": false,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "cc2bcf27faa6741f",
+        "type": "debug",
+        "z": "b04fcab76102f205",
+        "name": "Command failure",
+        "active": true,
+        "tosidebar": false,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "8a520ad09cee8eed",
+        "type": "link out",
+        "z": "b04fcab76102f205",
+        "name": "Projector Status Update",
+        "mode": "link",
+        "links": [
+            "2b0b44c4c8158c5c"
+        ],
+        "x": 1045,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "5f4dfb8a7c14536f",
+        "type": "wake on lan",
+        "z": "94f85f5b7544858f",
+        "mac": "4C-82-A9-84-72-DD",
+        "host": "",
+        "udpport": 9,
+        "numpackets": 3,
+        "interval": 100,
+        "name": "",
+        "x": 520,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6943e5cc7bc54388",
+        "type": "inject",
+        "z": "94f85f5b7544858f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "5f4dfb8a7c14536f"
+            ]
+        ]
+    },
+    {
+        "id": "58dd3ac114a4f3d6",
+        "type": "ui_button",
+        "z": "94f85f5b7544858f",
+        "name": "",
+        "group": "43d488a4c3576fc5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Turn on",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "5f4dfb8a7c14536f",
+                "be33e45cd79914eb"
+            ]
+        ]
+    },
+    {
+        "id": "be33e45cd79914eb",
+        "type": "debug",
+        "z": "94f85f5b7544858f",
+        "name": "Turning off computer",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "9fe5449c65ae1de6",
+        "type": "google-home",
+        "z": "dd34169d2b1f7fe0",
+        "conf": "0f16f0dd8e8b9bfc",
+        "device": "34368",
+        "acknowledge": false,
+        "name": "",
+        "topic": "",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "2b4408e0a7d72be2"
+            ]
+        ]
+    },
+    {
+        "id": "1119504f94e5f77c",
+        "type": "link call",
+        "z": "dd34169d2b1f7fe0",
+        "name": "Google home projector OFF",
+        "links": [
+            "65e42b929915de2d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 600,
+        "y": 160,
+        "wires": [
+            [
+                "c4dbc0bf9d5ac3ed"
+            ]
+        ]
+    },
+    {
+        "id": "2b4408e0a7d72be2",
+        "type": "switch",
+        "z": "dd34169d2b1f7fe0",
+        "name": "",
+        "property": "payload.params.on",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 340,
+        "y": 100,
+        "wires": [
+            [
+                "eeb336ac8dacb0b5"
+            ],
+            [
+                "022fafce3421fd1b",
+                "1119504f94e5f77c"
+            ]
+        ]
+    },
+    {
+        "id": "022fafce3421fd1b",
+        "type": "debug",
+        "z": "dd34169d2b1f7fe0",
+        "name": "Turn OFF Projector command",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "fbb193481c43f5b9",
+        "type": "google-home-response",
+        "z": "dd34169d2b1f7fe0",
+        "conf": "0f16f0dd8e8b9bfc",
+        "device": "34368",
+        "name": "",
+        "x": 520,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "2b0b44c4c8158c5c",
+        "type": "link in",
+        "z": "dd34169d2b1f7fe0",
+        "name": "Google home projector status update",
+        "links": [
+            "8a520ad09cee8eed",
+            "4aa7b824f9b4f24f"
+        ],
+        "x": 45,
+        "y": 280,
+        "wires": [
+            [
+                "3662a569.efac9a"
+            ]
+        ]
+    },
+    {
+        "id": "3662a569.efac9a",
+        "type": "function",
+        "z": "dd34169d2b1f7fe0",
+        "name": "Update projector status",
+        "func": "\nmsg.payload = {\n    command: \"action.devices.commands.OnOff\",\n    params: {\n        on: msg.payload\n    }\n};\ndelete msg._confId;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "fbb193481c43f5b9"
+            ]
+        ]
+    },
+    {
+        "id": "eeb336ac8dacb0b5",
+        "type": "link call",
+        "z": "dd34169d2b1f7fe0",
+        "name": "Google home projector ON",
+        "links": [
+            "66915cdff0c34458"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 600,
+        "y": 80,
+        "wires": [
+            [
+                "dad65ac8c67704e5",
+                "21ead1fdc2b9650a"
+            ]
+        ]
+    },
+    {
+        "id": "dad65ac8c67704e5",
+        "type": "debug",
+        "z": "dd34169d2b1f7fe0",
+        "name": "Turn ON Projector command",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c4dbc0bf9d5ac3ed",
+        "type": "change",
+        "z": "dd34169d2b1f7fe0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 160,
+        "wires": [
+            [
+                "4aa7b824f9b4f24f"
+            ]
+        ]
+    },
+    {
+        "id": "21ead1fdc2b9650a",
+        "type": "change",
+        "z": "dd34169d2b1f7fe0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 80,
+        "wires": [
+            [
+                "4aa7b824f9b4f24f"
+            ]
+        ]
+    },
+    {
+        "id": "4aa7b824f9b4f24f",
+        "type": "link out",
+        "z": "dd34169d2b1f7fe0",
+        "name": "Response to Google home",
+        "mode": "link",
+        "links": [
+            "2b0b44c4c8158c5c"
+        ],
+        "x": 1065,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "e5f46c1b338a9557",
+        "type": "comment",
+        "z": "dd34169d2b1f7fe0",
+        "name": "Projector control",
+        "info": "",
+        "x": 120,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "470e4e03099b4e54",
+        "type": "ui_button",
+        "z": "8c638b97fb2d5d74",
+        "name": "Projector ON",
+        "group": "4d23058efc61dd9d",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Turn on",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "eb77ad333eff3c2a"
+            ]
+        ]
+    },
+    {
+        "id": "dd05355709b6361b",
+        "type": "ui_button",
+        "z": "8c638b97fb2d5d74",
+        "name": "Projector OFF",
+        "group": "4d23058efc61dd9d",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Turn off",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "0d6ee7f9c86a380a"
+            ]
+        ]
+    },
+    {
+        "id": "eb77ad333eff3c2a",
+        "type": "link call",
+        "z": "8c638b97fb2d5d74",
+        "name": "",
+        "links": [
+            "66915cdff0c34458"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 510,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d6ee7f9c86a380a",
+        "type": "link call",
+        "z": "8c638b97fb2d5d74",
+        "name": "",
+        "links": [
+            "65e42b929915de2d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 510,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "58c3d080d83c1fe4",
+        "type": "mqtt in",
+        "z": "d0b0602f04eb8cc8",
+        "name": "",
+        "topic": "room/computer/+",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b1f9859af7b4842f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 400,
+        "wires": [
+            [
+                "d3b735c9089382b1"
+            ]
+        ]
+    },
+    {
+        "id": "d3b735c9089382b1",
+        "type": "debug",
+        "z": "d0b0602f04eb8cc8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "b2fd040fb289d989",
+        "type": "mqtt out",
+        "z": "d0b0602f04eb8cc8",
+        "name": "",
+        "topic": "room/computer/mycomputer",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b1f9859af7b4842f",
+        "x": 460,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "aa4ff5c4c0b88c77",
+        "type": "inject",
+        "z": "d0b0602f04eb8cc8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "b2fd040fb289d989"
+            ]
+        ]
+    }
+]
