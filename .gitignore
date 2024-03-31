@@ -1,3 +1,6 @@
 node_modules/
 .env
 .flows.json.backup
+.config.nodes.json
+.config.runtime.json
+.config.runtime.json.backup
