@@ -33,7 +33,8 @@ module.exports = {
  ******************************************************************************/
 
     /** The file containing the flows. If not set, defaults to flows_<hostname>.json **/
-    flowFile: 'flows.json',
+	flowFile: os.hostname().toLowerCase() === process.env.GAMING_PC_HOSTNAME ? 'gaming_pc_flows.json': 'flows.json',
+	
 
     /** By default, credentials are encrypted in storage using a generated key. To
      * specify your own secret, set the following property.
@@ -143,7 +144,12 @@ module.exports = {
 
     /** the tcp port that the Node-RED web server is listening on */
     uiPort: process.env.PORT || 1880,
+    
+	
+    /** Hostname of the machine running */
     hostname: os.hostname(),
+
+    env: process.env,
 
     /** By default, the Node-RED UI accepts connections on all IPv4 interfaces.
      * To listen on all IPv6 addresses, set uiHost to "::",
