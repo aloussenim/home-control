@@ -1,0 +1,107 @@
+[
+    {
+        "id": "1dec9d79148aaad4",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fc7b0d4aa9347a5d",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "home-control.local",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e12a7c8bf622a841",
+        "type": "mqtt in",
+        "z": "1dec9d79148aaad4",
+        "name": "",
+        "topic": "computer/+",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "fc7b0d4aa9347a5d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "361e51402d5694ce",
+        "type": "mqtt out",
+        "z": "1dec9d79148aaad4",
+        "name": "",
+        "topic": "computer/msi-home-pc",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fc7b0d4aa9347a5d",
+        "x": 460,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "fe049376907014a4",
+        "type": "inject",
+        "z": "1dec9d79148aaad4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 180,
+        "wires": [
+            [
+                "361e51402d5694ce"
+            ]
+        ]
+    }
+]
